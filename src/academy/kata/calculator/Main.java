@@ -1,6 +1,15 @@
 package academy.kata.calculator;
 
+import java.util.Scanner;
+
 public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Input:");
+        String str = in.nextLine();
+        System.out.println("Output:");
+        System.out.println(calc(str));
+    }
 
     public static String calc(String input) {
         String[] args = input.split(" ");
@@ -45,7 +54,7 @@ public class Main {
     }
 
     private static Integer romes_to_arabic(String ar_number) {
-        return switch (ar_number) {
+        return switch (ar_number.toUpperCase()) {
             case "I" -> 1;
             case "II" -> 2;
             case "III" -> 3;
